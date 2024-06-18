@@ -6,17 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <title> Spotify - Web Player: Music for everyone</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
 </head>
 
 <body>
     <div class="container flex">
         <!-- left div -->
         <div class="left ">
+            <div class="close">
+                <img class="invert" src="images/close.svg" alt="">
+            </div>
             <div class="home bg-same">
                 <div class="logo">
-                    <img width="150" src="images/logo.svg" alt="logo" class="invert" />
+                    <img width="110" src="images/logo.svg" alt="logo" class="invert" />
                 </div>
                 <ul>
                     <li>
@@ -42,7 +45,7 @@
                     </ul>
                 </div>
 
-                <div class="lib-footer">
+                <!-- <div class="lib-footer">
                     <div>
                         <a href="https://www.spotify.com/in-en/legal/">
                             <span>Legal</span>
@@ -78,13 +81,14 @@
                             <img src="images/language.svg" alt="" class="invert" /> English
                         </button>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- right div-->
         <div class="right ">
             <div class="header bg-same">
-                <div class="nav">
+                <div class="nav flex">
+                    <img class="invert hamburger " src="images/hamburger.svg" alt="">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#ffffff"
                         fill="none">
                         <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
@@ -102,37 +106,13 @@
                 </div>
             </div>
             <div class="spotifyPlaylists">
-                <h1>Popular artists</h1>
-                <h2>Show All</h2>
+                <div class="flex listhead ">
+                    <h2>Popular artists</h2>
+                    <h3>Show All</h3>
+                </div>
+
                 <div class="cardContainer">
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <!-- Circle background -->
-                                <circle cx="12" cy="12" r="12" fill="green" />
-                                <path
-                                    d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67656300005f1fe46079c9a5b7c544c6922ac9" alt="" />
-                        <h3>Welcome back, RJ Balaji</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="card">
-                        <div class="play">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                <!-- Circle background -->
-                                <circle cx="12" cy="12" r="12" fill="green" />
-                                <path
-                                    d="M18.8906 12.846C18.5371 14.189 16.8667 15.138 13.5257 17.0361C10.296 18.8709 8.6812 19.7884 7.37983 19.4196C6.8418 19.2671 6.35159 18.9776 5.95624 18.5787C5 17.6139 5 15.7426 5 12C5 8.2574 5 6.3861 5.95624 5.42132C6.35159 5.02245 6.8418 4.73288 7.37983 4.58042C8.6812 4.21165 10.296 5.12907 13.5257 6.96393C16.8667 8.86197 18.5371 9.811 18.8906 11.154C19.0365 11.7084 19.0365 12.2916 18.8906 12.846Z"
-                                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" fill="black" />
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67656300005f1fe46079c9a5b7c544c6922ac9" alt="" />
-                        <h3>Welcome back, RJ Balaji</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                   
                 </div>
                 <div class="playbar">
                     <div class="seekbar">
@@ -142,25 +122,33 @@
 
                     </div>
                     <div class="aboveBar">
-                    <div class="songInfo" style="color: black; font-weight: 700;">
+                        <div class="songInfo" style="color: black; font-weight: 700;">
+
+                        </div>
+                        <div class="playButtons">
+                            <img id="previos" src="images/prevsong.svg" alt="prevsong">
+                            <img id="play" src="images/play.svg" alt="playbutton">
+                            <img id="next" src="images/nextsong.svg" alt="nextsong">
+                        </div>
+                        <div class="timevol">
+                            <div class="songTime" style="color: black; font-weight: 700;">
+                            </div>
+                            <div class="volume flex">
+                                <img width="23" src="images/volume.svg" alt="">
+                                <div class="range">
+                                    <input type="range" name="volume" id="">
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
-                    <div class="playButtons">
-                        <img id="previos" src="images/prevsong.svg" alt="prevsong">
-                        <img id="play" src="images/play.svg" alt="playbutton">
-                        <img id="next" src="images/nextsong.svg" alt="nextsong">
-                    </div>
-                    <div class="songTime" style="color: black; font-weight: 700;">
-
-                    </div>
-                </div>
 
                 </div>
             </div>
         </div>
     </div>
     <!-- footer -->
-    <footer>
+    <!-- <footer>
         <div class="left">
             <p>Preview of Spotify</p>
             <p>
@@ -171,8 +159,8 @@
         <div class="right">
             <button>Signup for free</button>
         </div>
-    </footer>
-    <script src="script.js"></script>
+    </footer> -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>

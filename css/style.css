@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --a: 0
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+    position: relative;
+
+}
+
+.home .logo {
+    width: 30px;
+}
+
+.home ul li {
+    display: flex;
+    width: 16px;
+    list-style: none;
+    gap: 15px;
+    line-height: 30px;
+}
+
+.library {
+    min-height: 50vh;
+    position: relative;
+}
+
+.library .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading span img {
+    width: 16px;
+}
+
+.lib-footer {
+    display: flex;
+    font-size: 10px;
+    gap: 13px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.lib-footer a {
+    color: grey;
+
+}
+
+/* right div css*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    gap: 20px;
+}
+
+.header .buttons button {
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.spotifyPlaylists {
+    padding: 15px;
+    margin: 50px 0px;
+
+}
+
+.listhead {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardContainer {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 25px;
+    max-height: 60vh;
+    overflow-y: auto;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #252525;
+    position: relative;
+    transition: all .9s;
+
+}
+
+.card:hover {
+    background-color: rgb(149, 145, 145);
+    cursor: pointer;
+    --a: 1;
+}
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.play {
+    position: absolute;
+    bottom: 98px;
+    right: 15px;
+    opacity: var(--a);
+    transition: all 3s ease-out;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    background-color: rgb(158, 60, 167);
+}
+
+footer .left {
+    width: 70vw;
+}
+
+footer .right {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+footer .right button {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.playbar {
+    position: absolute;
+    bottom: 0px;
+    background-color: rgb(168, 195, 168);
+    width: 90%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 20px;
+
+}
+
+.songList {
+    height: 344px;
+    overflow: auto;
+    margin: 30px 0px;
+    padding: 0px 10px;
+}
+
+.songList ul li {
+    padding: 12px 10px;
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    border: 1px solid white;
+    margin: 15px 0px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.playNow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    gap: 10px;
+}
+
+.seekbar {
+    border: 2px solid red;
+    width: 98%;
+    height: 2px;
+    position: absolute;
+    bottom: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    position: relative;
+    bottom: 10px;
+    left: 0%;
+    transition: left 0.5s;
+    cursor: pointer;
+}
+
+.playButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+}
+
+.aboveBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+.timevol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+}
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+@media only screen and (max-width:1300px) {
+    .left {
+        position: absolute;
+        left: -130%;
+        transition: all .3s;
+        z-index: 1;
+        width: 330px;
+        background-color: black;
+    }
+
+    .right {
+        width: 100vw;
+    }
+
+    .playbar {
+        width: 90vw;
+        font-size: 12px;
+    }
+
+    .seekbar {
+        width: 93%;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .left .close {
+        display: block;
+        position: absolute;
+        right: 18px;
+        top: 14px;
+    }
+
+    .listhead {
+        font-size: 12px;
+    }
+
+    .cardContainer {
+        justify-content: center;
+    }
+
+    .aboveBar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .timevol {
+        flex-direction: column;
+    }
+
+
+}
